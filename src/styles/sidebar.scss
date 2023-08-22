@@ -1,0 +1,32 @@
+:root{
+    --min-width:60px;
+    --max-width: 320px;
+}
+
+.sidebar{
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    gap:0;
+    height: 100dvh;
+    flex-direction: column;
+    box-shadow: 2px 0px 4px 0px rgba(119, 119, 119, 0.15);
+}
+
+@keyframes sidebar-animation-expand{
+    0% { width: var(--min-width); }
+    100% { width: var(--max-width); }
+}
+
+@keyframes sidebar-animation-minimize{
+    0% { width: var(--max-width); }
+    100% { width: var(--min-width); }
+}
+
+.expand{
+    animation: sidebar-animation-expand 300ms ease-in-out;
+}
+
+.minimize{
+    animation: sidebar-animation-minimize 300ms ease-in-out;
+}

@@ -1,0 +1,35 @@
+@use "common" as *;
+
+.dashboard{
+	margin: 0 auto;
+  	overflow: hidden;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	display: flex;
+	width: 100dvw;
+	height: 100dvh;
+	padding: 0px;
+	margin: 0px;
+	&::before{
+		padding: 0px;
+		margin: 0px;
+	}
+}
+
+.dashboard-toolbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+    .dashboard-toolbar-title{
+		display: none;
+	}
+
+	.dashboard-toolbar{
+		justify-content: end;
+	}
+}

@@ -1,0 +1,24 @@
+@use "common" as *;
+
+.master-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.master-filler {
+    height: 100dvh;
+}
+
+.master-content {
+    height: 100dvh;
+}
+  
+@media (max-width: 768px) {
+    .master-filler {
+        display: none;
+    }
+  
+    .master-content {
+        flex-basis: 100%;
+    }
+}

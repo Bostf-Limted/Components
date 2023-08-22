@@ -1,0 +1,28 @@
+@keyframes rotation{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.tools-rotate{ animation: rotation 1200ms infinite linear; }
+
+:root{ --tools-minimized-right: 0px; }
+
+@keyframes tools-animation-expand{
+    0% { right: var(--tools-minimized-right); }
+    100% { right: 0px; }
+}
+
+@keyframes tools-animation-minimize{
+    0% { right: 0px; }
+    100% { right: var(--tools-minimized-right); }
+}
+
+.tools-expanded{
+    right: 0px;
+    animation: tools-animation-expand 300ms ease-in-out;
+}
+
+.tools-minimized{
+    right: var(--tools-minimized-right);
+    animation: tools-animation-minimize 300ms ease-in-out;
+}

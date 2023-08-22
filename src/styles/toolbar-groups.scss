@@ -1,0 +1,55 @@
+@use "common" as *;
+
+@keyframes toolbar-group-animation-open{
+    0% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+    100% {
+        transform-origin: top;
+        transform: scaleY(1); 
+    }
+}
+
+.toolbar-group-common{
+    cursor: pointer;
+}
+
+.toolbar-group-desktop{
+    display: flex;
+    flex-direction: row;
+}
+
+.toolbar-group-icon{
+    display: none;
+    cursor: pointer;
+}
+
+.toolbar-group-mobile{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 50;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: white;
+    box-shadow: -3px 8px 5px 2px rgba(119, 119, 119, 0.15);
+}
+
+@media (max-width: 768px) {
+    .toolbar-group-desktop {
+        display: none;
+    }
+  
+    .toolbar-group-icon {
+        display: inline;
+    }
+
+    .toolbar-group-mobile{
+		display: flex;
+	}
+}
+
+.toolbar-group-mobile-open{
+    animation: toolbar-group-animation-open 200ms ease-in-out;
+}

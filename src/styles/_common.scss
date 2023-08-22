@@ -1,0 +1,94 @@
+:root{
+    --primary-color: #6c63ff;
+    --primary-dark-color: #403ab4;
+    --secondary-color: #f4511e;
+    --secondary-dark-color:  #c5431b;
+    --grey-color: rgb(148, 148, 149);
+    --grey-dark-color: rgb(128, 128, 128);
+    --light-color: #f8f8f8;
+}
+
+$primary: var(--primary-color);
+$primary-dark: var(--primary-dark-color);
+$secondary: var(--secondary-color);
+$secondary-dark: var(--secondary-dark-color);
+$grey: var(--grey-color);
+$grey-dark: var(--grey-dark-color);
+$light: var(--light-color);
+
+@mixin text-custom($color){
+    color: $color !important;
+}
+  
+@mixin bg-custom($color){
+	background-color: $color !important;
+}
+  
+@mixin border($color, $thickness){
+    border-style: solid !important; 
+    border-color: $color !important;
+    border-width: $thickness !important;
+}
+  
+@mixin border-primary($thickness){
+    @include border( $primary, $thickness);
+}
+  
+@mixin btn($color, $hoverColor, $textColor, $textHover){
+    background-color: $color !important;
+	border-style: none;
+	color: $textColor;
+	&:hover{
+        background-color: $hoverColor !important;
+        color: $textHover;
+	}
+}
+  
+@mixin outline($color){
+    background-color: transparent;
+	@include border( $color, 2px);
+    color: $color;
+}
+  
+@mixin btn-outline($color){
+	@include outline($color);
+	&:hover{
+	  background-color: $color;
+	  color: white;
+	}
+}
+
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg { font-size: 3.5rem; }
+}
+
+@media screen and (max-width: 768px) {
+	.col-sm-4 { text-align: center; margin: 25px 0; }
+}
+
+.bg-primary{ @include bg-custom($primary); }
+.bg-secondary{ @include bg-custom($secondary); }
+.bg-grey{ @include bg-custom($grey); }
+
+.text-primary { @include text-custom($primary) }
+.text-secondary { @include text-custom($secondary) }
+.text-grey { @include text-custom($grey) }
+
+.btn-primary{ @include btn( $primary, $primary-dark ,  white, white ); }
+.btn-secondary{ @include btn( $secondary, $secondary-dark, white, white); }
+.btn-grey{ @include btn( $grey, $grey-dark, white, white); }
+
+.btn-outline-primary{ @include btn-outline($primary); }
+.btn-outline-secondary{ @include btn-outline($secondary); }
+.btn-outline-grey{ @include btn-outline($grey); }
+
+.border-primary{ @include border($primary, 2px); }
+.border-secondary{ @include border($secondary, 2px); }
+.border-grey{ @include border($grey, 2px); }
+
+.hidden-content{
+    visibility: hidden;
+    :hover{
+        visibility: visible;
+    }
+}
