@@ -5,3 +5,6 @@ export * from "./draggable";
 export * from "./dashboard";
 export * from "./tools";
 export * from "./master-layout";
+export * from "./loading";
+export * from "./footer";
+export * from "./calander";

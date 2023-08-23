@@ -1,6 +1,6 @@
 {
-  "name": "bsoft-components",
-  "version": "1.0.9",
+  "name": "bsoft-react-ui",
+  "version": "0.0.2",
   "description": "Shared components for bsoft react projects",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bostf-Limted/Blimited.git"
+    "url": "git+https://github.com/Bostf-Limted/Components.git"
   },
   "author": "Okelekele Nobel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bostf-Limted/Blimited/issues"
+    "url": "https://github.com/Bostf-Limted/Components/issues"
   },
-  "homepage": "https://github.com/Bostf-Limted/Blimited#readme",
+  "homepage": "https://github.com/Bostf-Limted/Components#readme",
   "devDependencies": {
     "@storybook/addon-essentials": "^7.2.3",
     "@storybook/addon-interactions": "^7.2.3",
@@ -55,6 +55,7 @@
     "bootstrap": "^5.3.1",
     "react-bootstrap": "^2.8.0",
     "react-icons": "^4.10.1",
+    "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.15.0",
     "sass": "^1.65.1"
   }

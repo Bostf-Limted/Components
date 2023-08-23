@@ -1,0 +1,33 @@
+@use "common" as *;
+
+.calender{
+    width:  100%;
+}
+
+.calender > thead > th, .calender > tbody > tr > td{
+    @include border(rgba($grey, 0.4), 1px);
+}
+
+.calender > thead > th{
+    @include text-custom($grey);
+    height: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.calender > tbody > tr > td{
+    height: 100px;
+    &:hover{
+        @include bg-custom(rgba($grey, 0.3));
+    }
+}
+
+.calender-options{
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.calender-active{
+    color: whitesmoke;
+    background-color:  rgba($grey, 0.8);
+}
